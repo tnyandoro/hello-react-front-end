@@ -1,20 +1,18 @@
-import logo from './logo.svg';
-import React from 'react';
-import {
-  Switch,
-  Route,
-} from 'react-router-dom';
-import Rockets from './components/Rockets/Rockets';
+import React from "react";
+import { Provider } from 'react-redux';
+import store from '../redux/ConfigureStore';
+import Greeting from "./components/Greetings";
 
-import Nav from './components/Nav';
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <div className="App">
       <div className="Main">
         <Nav />
-        <Switch>
-        </Switch>
+        <Provider store={store}>
+          <Greeting />
+        </Provider>
       </div>
     </div>
   );
