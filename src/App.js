@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from 'react-redux';
-import store from '../redux/ConfigureStore';
+import store from './redux/configureStore';
 import Greeting from "./components/Greetings";
 
 import Nav from "./components/Nav";

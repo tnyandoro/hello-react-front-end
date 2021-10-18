@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { getMessages } from '../redux/Messages';
-import './App.css';
 
 const Greeting = () => {
   const messages = useSelector((state) => state.messageReducer);
@@ -15,15 +14,15 @@ const Greeting = () => {
     if (!messages.length) {
       dispatch(getMessages());
     }
-  }, []);
+  }, [dispatch, messages.length]);
 
-  const shuffle = () => {
+  const collade = () => {
     setMessage(messages[Math.floor(Math.random() * messages.length)]);
   };
 
   return (
     <ListGroup>
-      <Button variant="primary" onClick={shuffle}>Load Messages</Button>
+      <Button variant="primary" onClick={collade}>Load Messages</Button>
       <ListGroupItem key={id}>
         <h4>{greeting}</h4>
       </ListGroupItem>

@@ -1,17 +1,16 @@
 import React from "react";
-import Navbar from "react-router-navbar";
-import { Container } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 
-export const Nav = () => {
+const Nav = () => {
   return (
     <div>
       <Navbar>
         <Container>
-          <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+          <Navbar.Brand href="#home">Click on the load Messages and get a random greeting</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Signed in as: <a href="#login">Mark Otto</a>
+              Signed in as: <a href="#login">Visitor</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
@@ -19,3 +18,5 @@ export const Nav = () => {
     </div>
   );
 };
+
+export default Nav;
