@@ -26,7 +26,7 @@ const Greeting = () => {
       <ListGroupItem key={id}>
         <h4>{greeting}</h4>
       </ListGroupItem>
-      </ListGroup>
+    </ListGroup>
   );
 };
 
