@@ -23,7 +23,7 @@ const messageReducer = (state = [], action) => {
 };
 
 const getMessages = () => (dispatch) => {
-  fetch('http://127.0.0.1:3000/api/v1/messages')
+  fetch('https://rails-tendai-backend.herokuapp.com/api/v1/messages')
     .then((response) => response.json())
     .then((json) => dispatch(loadMessages(json)));
 };
